@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medicine Tracker and Reminder</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<span onclick="toggleMenu()">☰</span>
+<h2>💊 Medicine Tracker</h2>
+</header>
+
+<div id="menu" class="menu">
+<button onclick="showPage('home')">Home</button>
+<button onclick="showPage('add')">Add Medicine</button>
+<button onclick="showPage('history')">History</button>
+</div>
+
+<section id="home" class="page">
+<h3>Stay Healthy ❤️</h3>
+<p>"Take medicine on time, stay strong."</p>
+</section>
+
+<section id="add" class="page">
+<h3>Add Medicine</h3>
+<input id="name" placeholder="Medicine Name">
+<input id="dose" placeholder="Dosage (e.g 500mg)">
+<input id="time" type="datetime-local">
+<input id="tablets" type="number" placeholder="Total Tablets">
+<button onclick="saveMedicine()">Save & Set Reminder</button>
+</section>
+
+<section id="history" class="page">
+<h3>Medicine History</h3>
+<ul id="historyList"></ul>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
